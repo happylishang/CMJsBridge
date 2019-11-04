@@ -66,6 +66,8 @@ public class WebViewActivity extends AppCompatActivity {
 
     }
 
+    JsBridgeApi mJsBridgeApi;
+
     @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onResumeFragments() {
@@ -74,12 +76,14 @@ public class WebViewActivity extends AppCompatActivity {
         webSettings.setAllowUniversalAccessFromFileURLs(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
         webSettings.setJavaScriptEnabled(true);
-        new JsBridgeApi(webView, new IJsCallBack() {
+        mJsBridgeApi = new JsBridgeApi(webView, new IJsCallBack() {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
                 Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean));
+                mJsBridgeApi.notifyH5("sf", jsMessageBean.id);
             }
-        }).openJsBridgeChannal(webView);
+        });
+        mJsBridgeApi.openJsBridgeChannal(webView);
         webView.setWebContentsDebuggingEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());

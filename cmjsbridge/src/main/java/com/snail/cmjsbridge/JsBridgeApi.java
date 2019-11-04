@@ -34,7 +34,6 @@ public class JsBridgeApi {
         } catch (JSONException e) {
             return;
         }
-        mWebView.loadUrl("window.jsonRPC.onMessage(" + JsonUtil.toJsonString(jsonObject) + ")");
+        mWebView.loadUrl("javascript:" + "window.jsonRPC.onMessage(" + jsonObject.toString() + ")");
     }
-
 }

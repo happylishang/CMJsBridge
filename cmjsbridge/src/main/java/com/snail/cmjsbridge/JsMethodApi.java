@@ -24,7 +24,9 @@ public class JsMethodApi {
             switch (msg.what) {
                 case JS_CALL:
                 case NATIVE_JS_CALLBACK:
-                    if(mIJsCallBack!=null){
+                    if (mIJsCallBack != null) {
+                        // 这里是否需要同步回调呢？还是等消息执行完，用户灵活回调
+                        //   把口子留给外层，如果有耗时操作，更灵活
                         mIJsCallBack.onJsCall((JsMessageBean) msg.obj);
                     }
                     break;

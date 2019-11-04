@@ -2,7 +2,7 @@
  var jsRPCResultTag = 'result';
  var jsRPCErrorTag = 'error';
  var jsRPCIdTag = 'id';
- var jsRPCVer = '2.0';
+ var jsRPCVer = '1.0';
 
 
  var _current_id = 0;
@@ -39,6 +39,7 @@
  jsonRPC.onMessage = function(message) {
      var response = message;
 
+console.log(JSON.stringify(message));
      if (typeof response === 'object' &&
          jsRPCTag in response &&
          response.jsonrpc === jsRPCVer) {

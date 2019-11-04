@@ -2,7 +2,7 @@
  var jsRPCResultTag = 'result';
  var jsRPCErrorTag = 'error';
  var jsRPCIdTag = 'id';
- var jsRPCVer = '2.0';
+ var jsRPCVer = '1.0';
 
 
  var _current_id = 0;

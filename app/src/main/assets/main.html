@@ -18,8 +18,16 @@
 </div>
 <script>
 
+
+
+
+function myFunction() {
+    console.log('myFunction called');
+}
+
+
 function callAndroidFromAddJsObj(){
-    window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}));
+    window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
 }
 
 </script>
