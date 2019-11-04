@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3e54992c-2ea7-4447-b077-29d10022c4c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/src/main/assets/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,12 +48,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="444">
+              <caret line="48" column="71" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="83" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#879#880#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -70,8 +83,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/core.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
+            <state relative-caret-position="239">
+              <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -79,21 +92,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="207">
+              <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
-              <folding>
-                <element signature="e#409#562#0" expanded="true" />
-                <element signature="e#561#562#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="158">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
             </state>
           </provider>
         </entry>
@@ -101,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
+            <state relative-caret-position="40">
+              <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2940#3122#0" expanded="true" />
@@ -117,15 +126,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="22">
               <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="616">
-              <caret line="28" column="41" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -155,6 +155,7 @@
       <find>nativeEvent</find>
       <find>doc</find>
       <find>Emulator Pixel_2_API_25_2 Android 7.1.1, API 25</find>
+      <find>nameValuePairs</find>
       <find>callNative</find>
     </findStrings>
     <replaceStrings>
@@ -171,7 +172,6 @@
         <option value="$PROJECT_DIR$/cmjsbridge/build.gradle" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsCallMethod.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsApiMethod.java" />
-        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/IJsCallBack.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java" />
@@ -183,6 +183,7 @@
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java" />
         <option value="$PROJECT_DIR$/app/src/main/assets/main.html" />
       </list>
     </option>
@@ -238,6 +239,58 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cmjsbridgedemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="cmjsbridge" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="cmjsbridge" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="cmjsbridge" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="cmjsbridge" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CMJsBridgeDemo" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="cmjsbridge" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="cmjsbridge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CMJsBridgeDemo" type="b2602c69:ProjectViewProjectNode" />
@@ -384,7 +437,7 @@
     <frame x="0" y="23" width="1920" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.24866879" />
+      <window_info content_ui="combo" id="Project" visible="true" weight="0.2880724" />
       <window_info id="Structure" side_tool="true" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Image Layers" />
@@ -394,12 +447,12 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Run" />
-      <window_info anchor="bottom" id="Logcat" weight="0.2858757" />
+      <window_info active="true" anchor="bottom" id="Logcat" visible="true" weight="0.6282486" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Find" weight="0.107344635" />
-      <window_info anchor="bottom" id="Debug" weight="0.3299435" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.3299435" />
+      <window_info anchor="bottom" id="Debug" weight="0.19661017" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3299435" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.1841808" />
@@ -422,6 +475,12 @@
           <line>79</line>
           <properties />
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -453,28 +512,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-29/org/json/JSONObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="279" column="31" selection-start-line="279" selection-start-column="31" selection-end-line="279" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <element signature="e#139#140#0" expanded="true" />
-            <element signature="e#187#188#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -521,6 +562,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/assets/core.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="25" column="7" lean-forward="true" selection-start-line="25" selection-start-column="7" selection-end-line="25" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="70" column="40" lean-forward="true" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2940#3122#0" expanded="true" />
+            <element signature="e#3121#3122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="48" column="71" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -531,48 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="82" column="33" selection-start-line="82" selection-start-column="33" selection-end-line="82" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2940#3122#0" expanded="true" />
-            <element signature="e#3121#3122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="8" lean-forward="true" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/assets/core.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="207">
+          <caret line="21" column="43" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
         </state>
       </provider>
     </entry>

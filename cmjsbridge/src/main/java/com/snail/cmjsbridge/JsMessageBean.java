@@ -1,5 +1,7 @@
 package com.snail.cmjsbridge;
 
+import com.google.gson.JsonObject;
+
 import org.json.JSONObject;
 
 /**
@@ -9,6 +11,6 @@ public class JsMessageBean {
 
     public String version;
     public String method;
-    public JSONObject params;
+    public String params;//json参数
     public int id;
 }
