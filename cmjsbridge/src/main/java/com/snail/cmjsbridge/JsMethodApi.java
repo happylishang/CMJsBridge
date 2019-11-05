@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import com.google.gson.Gson;
 
 
-public class JsMethodApi {
+class JsMethodApi {
     private IJsCallBack mIJsCallBack;
     private static final int JS_CALL = 1000;
     private static final int NATIVE_JS_CALLBACK = 1001;
@@ -35,11 +35,11 @@ public class JsMethodApi {
         }
     };
 
-    public void destroy() {
+    void destroy() {
         mHandler.removeCallbacksAndMessages(null);
     }
 
-    public JsMethodApi(IJsCallBack callBack) {
+    JsMethodApi(IJsCallBack callBack) {
         mIJsCallBack = callBack;
     }
 

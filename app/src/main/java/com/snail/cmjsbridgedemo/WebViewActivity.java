@@ -1,23 +1,13 @@
 package com.snail.cmjsbridgedemo;
 
 import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
-import android.net.http.SslError;
 import android.os.Bundle;
-import android.os.Handler;
 
-import android.os.Looper;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.JavascriptInterface;
-import android.webkit.JsPromptResult;
-import android.webkit.JsResult;
-import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
-import android.webkit.WebResourceRequest;
-import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -80,10 +70,10 @@ public class WebViewActivity extends AppCompatActivity {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
                 Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean));
-                mJsBridgeApi.notifyH5("sf", jsMessageBean.id);
+                mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
-        mJsBridgeApi.openJsBridgeChannal(webView);
+        mJsBridgeApi.openJsBridgeChannel(webView);
         webView.setWebContentsDebuggingEnabled(true);
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());
@@ -98,5 +88,12 @@ public class WebViewActivity extends AppCompatActivity {
         } else {
             super.onBackPressed();
         }
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+
+        mJsBridgeApi.destroy();
     }
 }

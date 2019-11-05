@@ -38,7 +38,6 @@
  jsonRPC.onMessage = function(message) {
      var response = message;
 
-console.log(JSON.stringify(message));
      if (typeof response === 'object' &&
          jsRPCTag in response &&
          response.jsonrpc === jsRPCVer) {

@@ -20,17 +20,20 @@ public class JsBridgeApi {
         mJsCallMethod = new JsMethodApi(callBack);
     }
 
-    public void openJsBridgeChannal(@NonNull WebView webView) {
+    public void openJsBridgeChannel(@NonNull WebView webView) {
         webView.addJavascriptInterface(mJsCallMethod, "JsMethodApi");
     }
 
     //    清理未处理的消息
-    public void destroy(@NonNull WebView webView) {
+    public void destroy() {
         mJsCallMethod.destroy();
     }
 
-
-    public void notifyH5(String jsonString, int id) {
+    /**
+     * native通知前端Js任务执行完毕，并回传结果
+     * 固定有js中的window.jsonRPC.onMessage方法
+     */
+    public void notifyNativeTaskFinished(String jsonString, int id) {
 
         JSONObject jsonObject = new JSONObject();
         try {
@@ -40,6 +43,10 @@ public class JsBridgeApi {
         } catch (JSONException e) {
             return;
         }
-        mWebView.loadUrl("javascript:" + "window.jsonRPC.onMessage(" + jsonObject.toString() + ")");
+        callH5FromeNative("window.jsonRPC.onMessage(" + jsonObject.toString() + ")");
+    }
+
+    public void callH5FromeNative(String request) {
+        mWebView.loadUrl("javascript:" + request);
     }
 }
