@@ -31,15 +31,14 @@
              error_cb: error_cb
          };
      }
-     
     JsMethodApi.callNative(JSON.stringify(request));
-
  };
 
 
  jsonRPC.onMessage = function(message) {
      var response = message;
 
+console.log(JSON.stringify(message));
      if (typeof response === 'object' &&
          jsRPCTag in response &&
          response.jsonrpc === jsRPCVer) {
@@ -58,7 +57,7 @@
      }
  };
 
-
+  <!--可以抽离一个进行封装-->
  window.NEJsbridge = {};
  window.NEJsbridge.invoke = callNative;
  window.jsonRPC = jsonRPC;

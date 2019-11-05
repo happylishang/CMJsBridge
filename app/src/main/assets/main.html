@@ -14,7 +14,7 @@
 <body>
 
 <div>
-    <button type="button" onclick="callAndroidFromAddJsObj()" class="buttonT">callAndroidFromAddJsObj</button>
+    <button type="button" onclick="callAndroidFromH5有callback" class="buttonT">callAndroidFromAddJsObj</button>
 </div>
 <script>
 
@@ -28,6 +28,9 @@ function myFunction() {
 
 function callAndroidFromAddJsObj(){
     window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
+        window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
+            window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
+                window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
 }
 
 </script>

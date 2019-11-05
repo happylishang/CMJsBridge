@@ -31,7 +31,6 @@
              error_cb: error_cb
          };
      }
-     
     JsMethodApi.callNative(JSON.stringify(request));
  };
 
