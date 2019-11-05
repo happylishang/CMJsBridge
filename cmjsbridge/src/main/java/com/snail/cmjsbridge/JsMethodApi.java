@@ -35,6 +35,10 @@ public class JsMethodApi {
         }
     };
 
+    public void destroy() {
+        mHandler.removeCallbacksAndMessages(null);
+    }
+
     public JsMethodApi(IJsCallBack callBack) {
         mIJsCallBack = callBack;
     }
@@ -54,7 +58,6 @@ public class JsMethodApi {
             return;
         }
         mHandler.obtainMessage(JS_CALL, bean).sendToTarget();
-
     }
 
 

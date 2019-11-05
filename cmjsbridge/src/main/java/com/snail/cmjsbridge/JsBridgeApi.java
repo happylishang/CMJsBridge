@@ -24,6 +24,12 @@ public class JsBridgeApi {
         webView.addJavascriptInterface(mJsCallMethod, "JsMethodApi");
     }
 
+    //    清理未处理的消息
+    public void destroy(@NonNull WebView webView) {
+        mJsCallMethod.destroy();
+    }
+
+
     public void notifyH5(String jsonString, int id) {
 
         JSONObject jsonObject = new JSONObject();

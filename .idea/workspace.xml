@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e54992c-2ea7-4447-b077-29d10022c4c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/src/main/assets/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/assets/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +23,7 @@
     <option name="testRunner" value="GRADLE" />
     <option name="delegatedBuild" value="true" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_25_2" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="emulator_API_28" />
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
@@ -32,13 +33,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
+            <state relative-caret-position="318">
+              <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#650#651#0" expanded="true" />
+                <element signature="e#674#675#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -52,10 +55,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="50" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="381">
+              <caret line="37" column="23" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1097#1098#0" expanded="true" />
                 <element signature="e#841#842#0" expanded="true" />
                 <element signature="e#879#880#0" expanded="true" />
               </folding>
@@ -85,12 +89,12 @@
         <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/assets/core.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/assets/main.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="365">
@@ -164,8 +168,8 @@
       <find>callNative</find>
       <find>nameValuePairs</find>
       <find>jsRPCTag</find>
-      <find>myFunction called</find>
       <find>_callbacks</find>
+      <find>myFunction called</find>
     </findStrings>
     <replaceStrings>
       <replace>JsMethodApi</replace>
@@ -187,13 +191,13 @@
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMessageBean.java" />
-        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java" />
-        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java" />
         <option value="$PROJECT_DIR$/cmjsbridge/src/main/assets/core.js" />
         <option value="$PROJECT_DIR$/app/src/main/assets/core.js" />
         <option value="$PROJECT_DIR$/app/src/main/assets/main.html" />
+        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" />
+        <option value="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java" />
       </list>
     </option>
   </component>
@@ -455,7 +459,7 @@
     <frame x="0" y="23" width="1920" height="1000" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" visible="true" weight="0.2880724" />
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.2880724" />
       <window_info id="Structure" side_tool="true" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Image Layers" />
@@ -465,7 +469,7 @@
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Run" />
-      <window_info active="true" anchor="bottom" id="Logcat" visible="true" weight="0.45310736" />
+      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.17740113" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
       <window_info anchor="bottom" id="Find" weight="0.107344635" />
@@ -490,7 +494,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java</url>
-          <line>36</line>
+          <line>42</line>
           <properties />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
@@ -578,18 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="50" selection-start-line="50" selection-end-line="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#879#880#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsonUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -616,19 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="26" column="53" lean-forward="true" selection-start-line="26" selection-start-column="53" selection-end-line="26" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/assets/jsInterface.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/assets/core.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
@@ -639,7 +618,7 @@
     <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/assets/core.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="20" column="20" lean-forward="true" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -647,6 +626,34 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
           <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/assets/jsInterface.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="37" column="23" selection-start-line="37" selection-start-column="16" selection-end-line="37" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1097#1098#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#879#880#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsBridgeApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="28" column="32" lean-forward="true" selection-start-line="28" selection-start-column="32" selection-end-line="28" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
