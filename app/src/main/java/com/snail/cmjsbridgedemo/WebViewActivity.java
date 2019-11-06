@@ -1,13 +1,11 @@
 package com.snail.cmjsbridgedemo;
 
-import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -21,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.snail.cmjsbridge.IJsCallBack;
 import com.snail.cmjsbridge.JsBridgeApi;
 import com.snail.cmjsbridge.JsMessageBean;
-import com.snail.cmjsbridge.JsWebChromClient;
+import com.snail.cmjsbridge.JsWebChromeClient;
 import com.snail.cmjsbridge.JsonUtil;
 import com.snail.cmjsbridge.NativeJSCallBack;
 import com.snail.cmjsbridge.NativeMessageBean;
@@ -83,9 +81,9 @@ public class WebViewActivity extends AppCompatActivity {
                 mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
-        mJsBridgeApi.openJsBridgeChannel(webView);
+
         webView.setWebContentsDebuggingEnabled(true);
-        webView.setWebChromeClient(new JsWebChromClient());
+        webView.setWebChromeClient(new JsWebChromeClient(mJsBridgeApi));
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/main.html");
 
@@ -109,5 +107,6 @@ public class WebViewActivity extends AppCompatActivity {
         super.onDestroy();
 
         mJsBridgeApi.destroy();
+        webView.destroy();
     }
 }

@@ -19,8 +19,8 @@ public class JsBridgeApi {
         mJsCallMethod = new JsMethodApi(callBack);
     }
 
-    public void openJsBridgeChannel(@NonNull WebView webView) {
-        webView.addJavascriptInterface(mJsCallMethod, "JsMethodApi");
+    public boolean handleJsCall(String jsonRequest) {
+       return  mJsCallMethod.callNative(jsonRequest);
     }
 
     //    清理未处理的消息

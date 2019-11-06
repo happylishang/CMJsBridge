@@ -17,6 +17,11 @@
      delete window.jsbridge;
  }
 
+function sleep(d){
+  for(var t = Date.now();Date.now() - t <= d;);
+}
+
+
  function callNative(method, params, success_cb, error_cb) {
 
      var request = {
@@ -32,7 +37,9 @@
              error_cb: error_cb
          };
      }
-    prompt(JSON.stringify(request));
+  var ret=  prompt(JSON.stringify(request));
+
+    console.log(ret);
  };
 
 

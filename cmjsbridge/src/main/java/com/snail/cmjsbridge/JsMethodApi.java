@@ -45,42 +45,19 @@ class JsMethodApi {
         mIJsCallBack = callBack;
     }
 
-    /**
-     * js调用native，可能需要回调
-     */
-    @JavascriptInterface
-    public void callNative(String jsonString) {
+
+    boolean callNative(String jsonString) {
         if (TextUtils.isEmpty(jsonString)) {
-            return;
+            return true;
         }
 
         JsMessageBean bean = JsonUtil.parseObject(jsonString, JsMessageBean.class);
 
         if (bean == null) {
-            return;
+            return false;
         }
         mHandler.obtainMessage(JS_CALL, bean).sendToTarget();
-    }
-
-
-    /**
-     * natvice调用js，并且需要js回调，这里就是js回调入口
-     */
-    @JavascriptInterface
-    public void notifyNativeCallBack(String jsonString, int messageId) {
-        if (TextUtils.isEmpty(jsonString)) {
-            return;
-        }
-        NativeJSCallBack callBack = mCallNativeBack.get(messageId);
-        if (callBack != null) {
-            synchronized (JsMethodApi.class) {
-                mCallNativeBack.remove(messageId);
-            }
-            JsResultBean jsResultBean = new JsResultBean();
-            jsResultBean.jsonString = jsonString;
-            jsResultBean.messageId = messageId;
-            mHandler.post(new InnerRunnable(callBack, jsResultBean));
-        }
+        return true;
     }
 
 
