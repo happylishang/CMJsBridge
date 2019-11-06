@@ -45,10 +45,10 @@ public class WebViewActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mJsBridgeApi.callH5FromNative( new NativeMessageBean(){
+                mJsBridgeApi.callH5FromNative(new NativeMessageBean() {
                     {
-                        message ="callFromNative('1',1)";
-                        messageId=1;
+                        message = "callFromNative('1',1)";
+                        messageId = 1;
                     }
                 }, new NativeJSCallBack() {
                     @Override
