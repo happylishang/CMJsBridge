@@ -35,7 +35,7 @@
  };
 
 
- jsonRPC.onMessage = function(message) {
+ jsonRPC.onJsCallFinished = function(message) {
      var response = message;
 
      if (typeof response === 'object' &&

@@ -43,10 +43,17 @@ public class JsBridgeApi {
         } catch (JSONException e) {
             return;
         }
-        callH5FromeNative("window.jsonRPC.onMessage(" + jsonObject.toString() + ")");
+        callH5("window.jsonRPC.onJsCallFinished(" + jsonObject.toString() + ")");
     }
 
-    public void callH5FromeNative(String request) {
+    /**
+     * 一般需要前端提供函数
+     */
+    public void callH5FromNative(String request, int messageId, Runnable callBack) {
+        mWebView.loadUrl("javascript:" + request);
+    }
+
+    private void callH5(String request) {
         mWebView.loadUrl("javascript:" + request);
     }
 }

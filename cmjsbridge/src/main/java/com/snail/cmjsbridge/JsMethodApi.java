@@ -65,7 +65,7 @@ class JsMethodApi {
      * natvice调用js，并且需要js回调，这里就是js回调入口
      */
     @JavascriptInterface
-    public void notifyNativeCallBack(String jsonString) {
+    public void notifyNativeCallBack(String jsonString,int messageId) {
         if (TextUtils.isEmpty(jsonString)) {
             return;
         }
