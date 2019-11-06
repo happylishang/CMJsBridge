@@ -1,4 +1,4 @@
- var jsRPCTag = 'jsonrpc';
+ var jsRPCTag = 'jsRPC';
  var jsRPCResultTag = 'result';
  var jsRPCErrorTag = 'error';
  var jsRPCIdTag = 'id';
@@ -9,7 +9,7 @@
 
  var _callbacks = {};
 
- var jsonRPC = {};
+ var jsRPC = {};
 
 
  function doClose() {
@@ -35,12 +35,12 @@
  };
 
 
- jsonRPC.onJsCallFinished = function(message) {
+ jsRPC.onJsCallFinished = function(message) {
      var response = message;
 
      if (typeof response === 'object' &&
          jsRPCTag in response &&
-         response.jsonrpc === jsRPCVer) {
+         response.jsRPC === jsRPCVer) {
          if (jsRPCResultTag in response && _callbacks[response.id]) {
              var success_cb = _callbacks[response.id].success_cb;
              delete _callbacks[response.id];
@@ -59,4 +59,4 @@
   <!--可以抽离一个进行封装-->
  window.NEJsbridge = {};
  window.NEJsbridge.invoke = callNative;
- window.jsonRPC = jsonRPC;
+ window.jsRPC = jsRPC;

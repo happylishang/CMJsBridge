@@ -31,19 +31,19 @@ public class JsBridgeApi {
 
     /**
      * native通知前端Js任务执行完毕，并回传结果
-     * 固定有js中的window.jsonRPC.onMessage方法
+     * 固定有js中的window.jsRPC.onMessage方法
      */
     public void notifyNativeTaskFinished(String jsonString, int id) {
 
         JSONObject jsonObject = new JSONObject();
         try {
-            jsonObject.put("jsonrpc", VERSION);
+            jsonObject.put("jsRPC", VERSION);
             jsonObject.put("id", Integer.valueOf(id));
             jsonObject.put("result", jsonString);
         } catch (JSONException e) {
             return;
         }
-        callH5("window.jsonRPC.onJsCallFinished(" + jsonObject.toString() + ")");
+        callH5("window.jsRPC.onJsCallFinished(" + jsonObject.toString() + ")");
     }
 
     /**
