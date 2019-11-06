@@ -48,7 +48,7 @@ class JsMethodApi {
 
     boolean callNative(String jsonString) {
         if (TextUtils.isEmpty(jsonString)) {
-            return true;
+            return false;
         }
 
         JsMessageBean bean = JsonUtil.parseObject(jsonString, JsMessageBean.class);
