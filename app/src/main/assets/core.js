@@ -32,7 +32,7 @@
              error_cb: error_cb
          };
      }
-    JsMethodApi.callNative(JSON.stringify(request));
+    prompt(JSON.stringify(request));
  };
 
 
@@ -58,7 +58,7 @@
  };
 
 function notifyNativeCallBack(message,messageId ){
-JsMethodApi.notifyNativeCallBack(message,messageId );
+
 }
 
   <!--可以抽离一个进行封装-->

@@ -21,6 +21,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.snail.cmjsbridge.IJsCallBack;
 import com.snail.cmjsbridge.JsBridgeApi;
 import com.snail.cmjsbridge.JsMessageBean;
+import com.snail.cmjsbridge.JsWebChromClient;
 import com.snail.cmjsbridge.JsonUtil;
 import com.snail.cmjsbridge.NativeJSCallBack;
 import com.snail.cmjsbridge.NativeMessageBean;
@@ -84,7 +85,7 @@ public class WebViewActivity extends AppCompatActivity {
         });
         mJsBridgeApi.openJsBridgeChannel(webView);
         webView.setWebContentsDebuggingEnabled(true);
-        webView.setWebChromeClient(new WebChromeClient());
+        webView.setWebChromeClient(new JsWebChromClient());
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/main.html");
 
