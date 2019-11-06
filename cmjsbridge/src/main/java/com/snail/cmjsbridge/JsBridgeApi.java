@@ -13,7 +13,7 @@ public class JsBridgeApi {
     private JsMethodApi mJsCallMethod;
     private WebView mWebView;
     private static final String VERSION = "1.0";
-
+    private static int sMessageId = 0;
 
     public JsBridgeApi(WebView webView, IJsCallBack callBack) {
         mWebView = webView;
@@ -40,17 +40,20 @@ public class JsBridgeApi {
             jsonObject.put("jsRPC", VERSION);
             jsonObject.put("id", Integer.valueOf(id));
             jsonObject.put("result", jsonString);
-        } catch (JSONException e) {
+        } catch (Exception e) {
             return;
         }
         callH5("window.jsRPC.onJsCallFinished(" + jsonObject.toString() + ")");
     }
 
+
     /**
-     * 一般需要前端提供函数
+     * 一般需要前端提供函数，自行处理，不统一封装也许更好
+     * 如果需要处理回到 id自己加入到request.message的message中
      */
-    public void callH5FromNative(String request, int messageId, Runnable callBack) {
-        mWebView.loadUrl("javascript:" + request);
+    public void callH5FromNative(NativeMessageBean request, Runnable callBack) {
+        mJsCallMethod.addCallBack(request.messageId, callBack);
+        callH5(request.message);
     }
 
     private void callH5(String request) {

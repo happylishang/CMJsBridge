@@ -1,3 +1,4 @@
+
  var jsRPCTag = 'jsRPC';
  var jsRPCResultTag = 'result';
  var jsRPCErrorTag = 'error';
@@ -38,7 +39,6 @@
  jsRPC.onJsCallFinished = function(message) {
      var response = message;
 
-
      if (typeof response === 'object' &&
          jsRPCTag in response &&
          response.jsRPC === jsRPCVer) {
@@ -57,7 +57,12 @@
      }
  };
 
+function notifyNativeCallBack(message,messageId ){
+JsMethodApi.notifyNativeCallBack(message,messageId );
+}
+
   <!--可以抽离一个进行封装-->
  window.NEJsbridge = {};
  window.NEJsbridge.invoke = callNative;
+ window.NEJsbridge.notifyNative =  notifyNativeCallBack;
  window.jsRPC = jsRPC;

@@ -21,6 +21,7 @@ import com.snail.cmjsbridge.IJsCallBack;
 import com.snail.cmjsbridge.JsBridgeApi;
 import com.snail.cmjsbridge.JsMessageBean;
 import com.snail.cmjsbridge.JsonUtil;
+import com.snail.cmjsbridge.NativeMessageBean;
 
 
 /**
@@ -43,7 +44,17 @@ public class WebViewActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                mJsBridgeApi.callH5FromNative( new NativeMessageBean(){
+                    {
+                        message ="callFromNative('1',1)";
+                        messageId=1;
+                    }
+                }, new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.v("callH5FromNative", "h5 notify native callback");
+                    }
+                });
 
             }
         });
