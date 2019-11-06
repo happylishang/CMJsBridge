@@ -58,11 +58,16 @@
  };
 
 function notifyNativeCallBack(message,messageId ){
-JsMethodApi.notifyNativeCallBack(message,messageId );
+ JsMethodApi.notifyNativeCallBack(message,messageId );
+ }
+
+function syncInvoke(message){
+return JsMethodApi.syncCallNativeWithReturn(message);
 }
 
   <!--可以抽离一个进行封装-->
  window.Jsbridge = {};
  window.Jsbridge.invoke = callNative;
  window.Jsbridge.notifyNative =  notifyNativeCallBack;
+  window.Jsbridge.syncInvoke  =  syncInvoke;
  window.jsRPC = jsRPC;

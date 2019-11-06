@@ -64,6 +64,21 @@ class JsMethodApi {
 
 
     /**
+     * js调用native，可能需要回调
+     */
+    @JavascriptInterface
+    public String syncCallNativeWithReturn(String jsonString) {
+        if (TextUtils.isEmpty(jsonString)) {
+            return null;
+        }
+
+
+//        需要返回值的同步处理
+      return "asdfasdfasdf";
+}
+
+
+    /**
      * natvice调用js，并且需要js回调，这里就是js回调入口
      */
     @JavascriptInterface

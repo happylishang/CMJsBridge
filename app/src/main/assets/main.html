@@ -31,7 +31,8 @@ function myFunction() {
 
 function callAndroidFromAddJsObj(){
     window.Jsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
- 
+
+      console.log(   window.Jsbridge.syncInvoke('firstnotify'));
 }
 
 </script>
