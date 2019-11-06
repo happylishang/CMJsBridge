@@ -13,6 +13,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -55,6 +56,8 @@ public class WebViewActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String result) {
                         Log.v("callH5FromNative", "h5 notify native callback");
+                        Toast.makeText(getApplicationContext(),"callH5FromNative  h5 notify native callback" ,Toast.LENGTH_SHORT).show();
+
                     }
                 });
 
@@ -74,7 +77,8 @@ public class WebViewActivity extends AppCompatActivity {
         mJsBridgeApi = new JsBridgeApi(webView, new IJsCallBack() {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
-                Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean));
+                Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean)) ;
+                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
                 mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
