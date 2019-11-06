@@ -13,7 +13,7 @@ class JsMethodApi {
     private IJsCallBack mIJsCallBack;
     private static final int JS_CALL = 1000;
     private static final int NATIVE_JS_CALLBACK = 1001;
-    private static SparseArray<Runnable> mCallNativeBack = new SparseArray<>();
+    private static SparseArray<NativeJSCallBack> mCallNativeBack = new SparseArray<>();
 
 
     private Handler mHandler = new Handler(Looper.getMainLooper()) {
@@ -30,15 +30,7 @@ class JsMethodApi {
                         mIJsCallBack.onJsCall((JsMessageBean) msg.obj);
                     }
                     break;
-                case NATIVE_JS_CALLBACK:
-                    if (msg.obj instanceof JsResultBean) {
-                        JsResultBean jsResultBean = (JsResultBean) msg.obj;
-                        Runnable runnable = mCallNativeBack.get(jsResultBean.messageId);
-                        if (runnable != null) {
-                            mHandler.post(runnable);
-                        }
-                    }
-                    break;
+
                 default:
                     break;
             }
@@ -79,20 +71,47 @@ class JsMethodApi {
         if (TextUtils.isEmpty(jsonString)) {
             return;
         }
-        JsResultBean jsResultBean = new JsResultBean();
-        jsResultBean.jsonString = jsonString;
-        jsResultBean.messageId = messageId;
-        mHandler.obtainMessage(NATIVE_JS_CALLBACK, jsResultBean).sendToTarget();
+        NativeJSCallBack callBack = mCallNativeBack.get(messageId);
+        if (callBack != null) {
+            synchronized (JsMethodApi.class) {
+                mCallNativeBack.remove(messageId);
+            }
+            JsResultBean jsResultBean = new JsResultBean();
+            jsResultBean.jsonString = jsonString;
+            jsResultBean.messageId = messageId;
+            mHandler.post(new InnerRunnable(callBack, jsResultBean));
+        }
+    }
+
+
+    void addCallBack(int messageId, NativeJSCallBack runnable) {
+        if (runnable != null) {
+            synchronized (JsMethodApi.class) {
+                mCallNativeBack.put(messageId, runnable);
+            }
+        }
+    }
+
+
+    private static class InnerRunnable implements Runnable {
+        private NativeJSCallBack mNativeJSCallBack;
+        private JsResultBean mJsResultBean;
+
+        InnerRunnable(NativeJSCallBack callBack, JsResultBean jsResultBean) {
+            mNativeJSCallBack = callBack;
+            mJsResultBean = jsResultBean;
+        }
+
+        @Override
+        public void run() {
+            if (mNativeJSCallBack != null) {
+                mNativeJSCallBack.onResult(mJsResultBean.jsonString);
+            }
+        }
     }
 
     private static class JsResultBean {
         String jsonString;
         int messageId;
-    }
-
-    void addCallBack(int messageId, Runnable runnable) {
-        if (runnable != null) {
-            mCallNativeBack.put(messageId, runnable);
-        }
     }
 }

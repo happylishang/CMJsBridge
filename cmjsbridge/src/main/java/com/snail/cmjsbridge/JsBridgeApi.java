@@ -4,7 +4,6 @@ import android.webkit.WebView;
 
 import androidx.annotation.NonNull;
 
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class JsBridgeApi {
@@ -51,7 +50,7 @@ public class JsBridgeApi {
      * 一般需要前端提供函数，自行处理，不统一封装也许更好
      * 如果需要处理回到 id自己加入到request.message的message中
      */
-    public void callH5FromNative(NativeMessageBean request, Runnable callBack) {
+    public void callH5FromNative(NativeMessageBean request, NativeJSCallBack callBack) {
         mJsCallMethod.addCallBack(request.messageId, callBack);
         callH5(request.message);
     }
