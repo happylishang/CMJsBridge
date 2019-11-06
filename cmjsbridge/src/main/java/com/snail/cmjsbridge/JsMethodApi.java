@@ -86,8 +86,8 @@ class JsMethodApi {
     }
 
     private static class JsResultBean {
-        public String jsonString;
-        public int messageId;
+        String jsonString;
+        int messageId;
     }
 
     void addCallBack(int messageId, Runnable runnable) {
