@@ -34,6 +34,7 @@ import com.snail.cmjsbridge.NativeMessageBean;
 public class WebViewActivity extends AppCompatActivity {
 
     private WebView webView;
+    private JsBridgeApi mJsBridgeApi;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -41,7 +42,7 @@ public class WebViewActivity extends AppCompatActivity {
         webView = new WebView(this);
         setContentView(webView);
         Button button = new Button(this);
-        button.setText("Button");
+        button.setText("Native Call h5 need callback");
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,20 +61,12 @@ public class WebViewActivity extends AppCompatActivity {
             }
         });
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        layoutParams.gravity = Gravity.RIGHT | Gravity.BOTTOM;
-        layoutParams.bottomMargin = 40;
+        layoutParams.gravity = Gravity.LEFT | Gravity.TOP;
+        layoutParams.topMargin = 200;
         FrameLayout viewGroup = (FrameLayout) findViewById(android.R.id.content);
         viewGroup.addView(button, layoutParams);
 
 
-    }
-
-    JsBridgeApi mJsBridgeApi;
-
-    @SuppressLint("SetJavaScriptEnabled")
-    @Override
-    protected void onResumeFragments() {
-        super.onResumeFragments();
         WebSettings webSettings = webView.getSettings();
         webSettings.setAllowUniversalAccessFromFileURLs(true);
         webSettings.setJavaScriptCanOpenWindowsAutomatically(true);
@@ -91,7 +84,11 @@ public class WebViewActivity extends AppCompatActivity {
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/main.html");
 
+
     }
+
+
+
 
     @Override
     public void onBackPressed() {
