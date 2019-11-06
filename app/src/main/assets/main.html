@@ -7,7 +7,7 @@
     <script type="text/javascript" src="jsInterface.js"></script>
 
     <script type="text/javascript"  >
-            window.NEJsbridge.invoke('头部就可以回调');
+            window.Jsbridge.invoke('头部就可以回调');
 
     </script>
 
@@ -30,7 +30,7 @@ function myFunction() {
 
 
 function callAndroidFromAddJsObj(){
-    window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
+    window.Jsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
  
 }
 

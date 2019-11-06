@@ -62,7 +62,7 @@ JsMethodApi.notifyNativeCallBack(message,messageId );
 }
 
   <!--可以抽离一个进行封装-->
- window.NEJsbridge = {};
- window.NEJsbridge.invoke = callNative;
- window.NEJsbridge.notifyNative =  notifyNativeCallBack;
+ window.Jsbridge = {};
+ window.Jsbridge.invoke = callNative;
+ window.Jsbridge.notifyNative =  notifyNativeCallBack;
  window.jsRPC = jsRPC;
