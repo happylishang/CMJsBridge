@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="main.css">
+
     <script src="jquery-3.1.0.js"></script>
     <script type="text/javascript" src="core.js"></script>
     <script type="text/javascript" src="jsInterface.js"></script>
@@ -30,10 +30,17 @@ function myFunction() {
 
 
 function callAndroidFromAddJsObj(){
-    window.NEJsbridge.invoke('firstnotify',JSON.stringify({'sdf':'sdf'}), myFunction );
+for( i=0;i<1000;i++){
+    window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
+        console.log('++'+i);
+    }
  
 }
-
+for( i=0;i<1000;i++){
+    window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
+        console.log('++'+i);
+    }
+    console.log('endend');
 </script>
 </body>
 </html>

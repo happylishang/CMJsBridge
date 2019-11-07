@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
@@ -18,5 +19,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this,WebViewActivity.class));
             }
         });
+
+
+        for(int i=0;i<50;i++){
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    for(;;){
+                     long i=System.currentTimeMillis();
+                    }
+                }
+            }).start();
+        }
     }
 }

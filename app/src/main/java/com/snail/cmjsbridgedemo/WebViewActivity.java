@@ -1,5 +1,6 @@
 package com.snail.cmjsbridgedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -35,14 +36,14 @@ public class WebViewActivity extends AppCompatActivity {
 
     private WebView webView;
     private JsBridgeApi mJsBridgeApi;
-
+static long id=0;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         webView = new WebView(this);
         setContentView(webView);
         Button button = new Button(this);
-        button.setText("Native Call h5 need callback");
+        button.setText("Native Call h5 need callback"+id++);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,11 +56,11 @@ public class WebViewActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String result) {
                         Log.v("callH5FromNative", "h5 notify native callback");
-                        Toast.makeText(getApplicationContext(),"callH5FromNative  h5 notify native callback" ,Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(),"callH5FromNative  h5 notify native callback" ,Toast.LENGTH_SHORT).show();
 
                     }
                 });
-
+              startActivity(new Intent(WebViewActivity.this,WebViewActivity.class));
             }
         });
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -77,7 +78,7 @@ public class WebViewActivity extends AppCompatActivity {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
                 Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean)) ;
-                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
                 mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
@@ -108,5 +109,17 @@ public class WebViewActivity extends AppCompatActivity {
 
         mJsBridgeApi.destroy();
         webView.destroy();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+//        webView.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+//        webView.onResume();
     }
 }
