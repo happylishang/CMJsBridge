@@ -4,10 +4,12 @@
 
     <script src="jquery-3.1.0.js"></script>
     <script type="text/javascript" src="core.js"></script>
-    <script type="text/javascript" src="jsInterface.js"></script>
+
 
     <script type="text/javascript"  >
-
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    console.log('是否是Android：'+isAndroid);
 
     </script>
 
@@ -31,16 +33,19 @@ function myFunction() {
 
 function callAndroidFromAddJsObj(){
 for( i=0;i<1000;i++){
-    window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
-        console.log('++'+i);
+        console.log('callAndroidFromAddJsObj ++ start');
+        window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
+        console.log('callAndroidFromAddJsObj ++ end');
     }
  
 }
+
 for( i=0;i<1000;i++){
-    window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
-        console.log('++'+i);
+        console.log('callAndroidFromAddJsObj ++ start');
+        window.NEJsbridge.invoke('sdfasdsdfasdsdfasdsdfasdsdfasdsdfasdsdfasd',JSON.stringify({'sdf':'sdf'}), myFunction );
+        console.log('callAndroidFromAddJsObj ++ end' + i);
     }
-    console.log('endend');
+
 </script>
 </body>
 </html>
