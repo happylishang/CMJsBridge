@@ -61,7 +61,12 @@ class JsMethodApi {
         if(mHandler!=null){
             mHandler.obtainMessage(JS_CALL, bean).sendToTarget();
         }
-
+// 测试阻塞
+//        try {
+//            Thread.sleep(3000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
     }
 
 
