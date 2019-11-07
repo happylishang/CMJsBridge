@@ -4,6 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.text.TextUtils;
+import android.util.Log;
 import android.util.SparseArray;
 import android.webkit.JavascriptInterface;
 
@@ -13,32 +14,30 @@ class JsMethodApi {
     private IJsCallBack mIJsCallBack;
     private static final int JS_CALL = 1000;
     private static final int NATIVE_JS_CALLBACK = 1001;
-    private static SparseArray<NativeJSCallBack> mCallNativeBack = new SparseArray<>();
-
-
+    private SparseArray<NativeJSCallBack> mCallNativeBack = new SparseArray<>();
     private Handler mHandler = new Handler(Looper.getMainLooper()) {
 
         @Override
         public void handleMessage(@NonNull Message msg) {
             super.handleMessage(msg);
-
             switch (msg.what) {
                 case JS_CALL:
-                    if (mIJsCallBack != null) {
+                    if (mIJsCallBack != null && msg.obj instanceof JsMessageBean) {
                         // 这里是否需要同步回调呢？还是等消息执行完，用户灵活回调
                         //   把口子留给外层，如果有耗时操作，更灵活
                         mIJsCallBack.onJsCall((JsMessageBean) msg.obj);
                     }
                     break;
-
                 default:
                     break;
             }
+
         }
     };
 
     void destroy() {
         mHandler.removeCallbacksAndMessages(null);
+        mHandler=null;
     }
 
     JsMethodApi(IJsCallBack callBack) {
@@ -59,7 +58,10 @@ class JsMethodApi {
         if (bean == null) {
             return;
         }
-        mHandler.obtainMessage(JS_CALL, bean).sendToTarget();
+        if(mHandler!=null){
+            mHandler.obtainMessage(JS_CALL, bean).sendToTarget();
+        }
+
     }
 
 
@@ -74,8 +76,8 @@ class JsMethodApi {
 
 
 //        需要返回值的同步处理
-      return "asdfasdfasdf";
-}
+        return "asdfasdfasdf";
+    }
 
 
     /**
@@ -94,7 +96,9 @@ class JsMethodApi {
             JsResultBean jsResultBean = new JsResultBean();
             jsResultBean.jsonString = jsonString;
             jsResultBean.messageId = messageId;
-            mHandler.post(new InnerRunnable(callBack, jsResultBean));
+            if (mHandler != null) {
+                mHandler.post(new InnerRunnable(callBack, jsResultBean));
+            }
         }
     }
 
