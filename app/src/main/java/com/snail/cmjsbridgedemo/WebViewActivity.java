@@ -1,6 +1,7 @@
 package com.snail.cmjsbridgedemo;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.util.Log;
@@ -56,11 +57,11 @@ public class WebViewActivity extends AppCompatActivity {
                     @Override
                     public void onResult(String result) {
                         Log.v("callH5FromNative", "h5 notify native callback");
-                        Toast.makeText(getApplicationContext(),"callH5FromNative  h5 notify native callback" ,Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(getApplicationContext(),"callH5FromNative  h5 notify native callback" ,Toast.LENGTH_SHORT).show();
 
                     }
                 });
-
+startActivity(new Intent(WebViewActivity.this,WebViewActivity.class));
             }
         });
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -78,7 +79,7 @@ public class WebViewActivity extends AppCompatActivity {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
                 Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean)) ;
-                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
                 mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
@@ -106,7 +107,15 @@ public class WebViewActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-
         mJsBridgeApi.destroy();
+        if (webView != null) {
+
+            if (webView.getParent() instanceof ViewGroup) {
+                ((ViewGroup) (webView.getParent())).removeView(webView);
+            }
+            webView.destroy();
+        }
+
+
     }
 }
