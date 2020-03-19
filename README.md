@@ -3,6 +3,7 @@ CMJsBridge
 
 使用方法：前端注入core.js，这样前端什么时候用都可以，客户端对于想用的用的webview自己open就可以，不使用的时候需要主动释放destroy
 
+>前端
 	<head>
 	    <link rel="stylesheet" href="main.css">
 	    <script src="jquery-3.1.0.js"></script>
@@ -17,6 +18,8 @@ CMJsBridge
 	
 	</head>
 
+
+>Android客户端
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
