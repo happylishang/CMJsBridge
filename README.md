@@ -1,7 +1,7 @@
 # CMJsBridge
 CMJsBridge
 
-使用方法：采用前端注入core.js，这样前端什么时候用都可以，客户端对于想用的用的webview自己open就可以，不使用的时候需要主动释放destroy
+使用方法：前端注入core.js，这样前端什么时候用都可以，客户端对于想用的用的webview自己open就可以，不使用的时候需要主动释放destroy
 
 	<head>
 	    <link rel="stylesheet" href="main.css">
