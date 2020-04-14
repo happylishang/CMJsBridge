@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -33,3 +34,61 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'com.google.code.gson:gson:2.8.6'
 }
+
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                // Add your description here
+                name 'Android Jsbridge '
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'snail'        //填写的一些基本信息
+                        name 'snail'
+                        email 'happylishang2956@gmail.com'
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+bintray {
+    user = "happylishang2956"
+    key = '7a2ee883da7028f349ca26a43a32efa679bcf2c7'
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "cmjsbridge"
+        licenses = ["Apache-2.0"]
+        userOrg = "happysnail"
+        publish = true
+        vcsUrl = 'https://github.com/happylishang/CacheEmulatorChecker.git'
+    }
+}
+
+
+version = '1.0'
+group = 'com.snail'
+
+task sourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+
+artifacts {
+    archives sourcesJar
+}
+
+
