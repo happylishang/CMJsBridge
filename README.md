@@ -21,6 +21,13 @@ CMJsBridge
 
 >Android客户端
 
+1、build.gradle
+    
+    implementation 'com.snail:cmjsbridge:1.0'
+
+
+2、代码中
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
