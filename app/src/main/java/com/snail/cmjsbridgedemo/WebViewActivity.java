@@ -1,11 +1,10 @@
 package com.snail.cmjsbridgedemo;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebChromeClient;
@@ -61,7 +60,7 @@ public class WebViewActivity extends AppCompatActivity {
 
                     }
                 });
-startActivity(new Intent(WebViewActivity.this,WebViewActivity.class));
+                startActivity(new Intent(WebViewActivity.this, WebViewActivity.class));
             }
         });
         FrameLayout.LayoutParams layoutParams = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
@@ -78,30 +77,35 @@ startActivity(new Intent(WebViewActivity.this,WebViewActivity.class));
         mJsBridgeApi = new JsBridgeApi(webView, new IJsCallBack() {
             @Override
             public void onJsCall(JsMessageBean jsMessageBean) {
-                Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean)) ;
-//                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
+                Log.v("onJsCall", JsonUtil.toJsonString(jsMessageBean));
+                Toast.makeText(getApplicationContext(),"js call native "+JsonUtil.toJsonString(jsMessageBean),Toast.LENGTH_SHORT).show();
                 mJsBridgeApi.notifyNativeTaskFinished("sf", jsMessageBean.id);
             }
         });
         mJsBridgeApi.openJsBridgeChannel(webView);
         webView.setWebContentsDebuggingEnabled(true);
+        webView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View view, int i, KeyEvent keyEvent) {
+                if (webView.canGoBack()) {
+                    webView.goBack();
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        });
         webView.setWebChromeClient(new WebChromeClient());
         webView.setWebViewClient(new WebViewClient());
         webView.loadUrl("file:///android_asset/main.html");
-
-
     }
-
-
 
 
     @Override
     public void onBackPressed() {
-        if (webView.canGoBack()) {
-            webView.goBack();
-        } else {
-            super.onBackPressed();
-        }
+
+        super.onBackPressed();
+
     }
 
     @Override
