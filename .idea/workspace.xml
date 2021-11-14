@@ -13,8 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e54992c-2ea7-4447-b077-29d10022c4c2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/JsBridgeWebView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/snail/cmjsbridgedemo/WebViewActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,6 +135,7 @@
     <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2019-11-06T09:12:05.019Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android-custom-view/Users/personal/prj/Github/CMJsBridge/app/src/main/java/com/snail/cmjsbridgedemo/JsBridgeWebView.java_SELECTED" value="JsBridgeWebView" />
     <property name="android.project.structure.last.selected" value="SDK Location" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
@@ -341,24 +342,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state width="1868" height="264" key="GridCell.Tab.0.bottom" timestamp="1622103108504">
-      <screen x="1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1868" height="264" key="GridCell.Tab.0.bottom/1920.25.1920.1055/0.25.1920.993@1920.25.1920.1055" timestamp="1622103108504" />
-    <state width="1868" height="264" key="GridCell.Tab.0.center" timestamp="1622103108502">
-      <screen x="1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1868" height="264" key="GridCell.Tab.0.center/1920.25.1920.1055/0.25.1920.993@1920.25.1920.1055" timestamp="1622103108502" />
-    <state width="1868" height="264" key="GridCell.Tab.0.left" timestamp="1622103108501">
-      <screen x="1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1868" height="264" key="GridCell.Tab.0.left/1920.25.1920.1055/0.25.1920.993@1920.25.1920.1055" timestamp="1622103108501" />
-    <state width="1868" height="264" key="GridCell.Tab.0.right" timestamp="1622103108503">
-      <screen x="1920" y="25" width="1920" height="1055" />
-    </state>
-    <state width="1868" height="264" key="GridCell.Tab.0.right/1920.25.1920.1055/0.25.1920.993@1920.25.1920.1055" timestamp="1622103108503" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
