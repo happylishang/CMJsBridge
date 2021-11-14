@@ -13,9 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e54992c-2ea7-4447-b077-29d10022c4c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmjsbridge/src/main/assets/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/cmjsbridge/src/main/assets/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/cmjsbridge/src/main/java/com/snail/cmjsbridge/JsMethodApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
