@@ -58,7 +58,8 @@
  };
 
 function notifyNativeCallBack(message,messageId ){
-JsMethodApi.notifyNativeCallBack(message,messageId );
+
+        JsMethodApi.notifyNativeCallBack(message,messageId );
 }
 
   <!--可以抽离一个进行封装-->
